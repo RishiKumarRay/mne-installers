@@ -22,3 +22,4 @@ dependencies:
 - darkdetect
 - qdarkstyle
 - dcm2niix
+- neurodsp
