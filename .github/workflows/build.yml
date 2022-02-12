@@ -88,13 +88,13 @@ jobs:
           mamba list
           . "$MneRoot\Scripts\mne.exe" sys_info
 
-      # - name: Archive artifacts
-      #   if: ${{ matrix.os == 'ubuntu-18.04' || matrix.os == 'macOS-10.15' || matrix.os == 'windows-2016' }}
-      #   uses: actions/upload-artifact@v2
-      #   with:
-      #     name: MNE-Python
-      #     path: |
-      #       MNE-Python-*.*
+      - name: Archive artifacts
+        if: ${{ matrix.os == 'ubuntu-18.04' || matrix.os == 'macOS-10.15' || matrix.os == 'windows-2016' }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: MNE-Python
+          path: .
+              
 
       - name: Release
         if: |
